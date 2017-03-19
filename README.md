@@ -66,11 +66,19 @@ A Terraform module for creating an [IBM Cloud Local Load Balancer](http://ibmclo
 
 # Usage
 
-TBD
+```hcl
+module "loadbalancer" {
+  source = "github.com/ckelner/tf_ibmcloud_local_loadbalancer?ref=v1.0"
+  connections = 250
+  datacenter = "dal06"
+}
+```
 
 # Outputs
 
-TBD
+- `loadbalancer_id`: The id of the load balancer
+- `loadbalancer_address`: The URL of the load balancer
+- `service_group_id`: The id of the service group
 
 # Authors
 
